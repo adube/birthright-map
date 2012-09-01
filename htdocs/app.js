@@ -1,12 +1,6 @@
 var map;
 
 (function(){
-    var urls = [
-        "http://a.tile.openstreetmap.org/${z}/${x}/${y}.png",
-        "http://b.tile.openstreetmap.org/${z}/${x}/${y}.png",
-        "http://c.tile.openstreetmap.org/${z}/${x}/${y}.png"
-    ];
-
     map = new OpenLayers.Map({
         div: "map",
         layers: [
