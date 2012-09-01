@@ -10,8 +10,8 @@ How to georeference a plain jpeg image
 I used the [World File] [1] method, which requires knowing how many map units
 there is in 1 pixel. Here's how I calculated it.
 
-The original jpeg file of Cerilia is 5032px X 3151px. Using Gimp, I selected
-the scale within the map, which gave 75miles for approximatively 225px.
+The [Map of Cerilia original JPEG file] [7] is 5032px X 3151px. Using Gimp, I
+selected the scale within the map, which gave 75miles for approximatively 225px.
 Converting that gave 1 mile / 3 pixels, or 1 pixel / 533.33 meters. I chose
 'meters' as my map units rather than miles.
 
@@ -90,6 +90,7 @@ GeoTIFF file instead. This will make the map tiles rendering much faster.
 References
 ----------
 
+*   [Map of Cerilia original JPEG image] [7]
 *   [World File wiki] [1]
 *   [World File calculator] [2]
 *   GDAL Utilities:
@@ -105,3 +106,4 @@ References
 [4]: http://en.wikipedia.org/wiki/GeoTIFF "GeoTIFF, best raster format"
 [5]: http://www.gdal.org/gdal_translate.html "gdal_translate, GDAL utility to convert raster data between different formats"
 [6]: http://www.gdal.org/gdaladdo.html "gdaladdo, builds overview images"
+[7]: http://community.wizards.com/bright/go/gallery/item/86320415?pref_tab=photos "Map of Cerilia, Compiled by Drakkan"
