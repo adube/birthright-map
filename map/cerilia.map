@@ -1,0 +1,42 @@
+MAP
+  NAME "Cerilia"
+  EXTENT -266.667 -1680266.666 2683466.665 266.667
+  SIZE 600 376
+  IMAGETYPE jpeg
+  SHAPEPATH "../data"
+  MAXSIZE 4096
+  PROJECTION
+    "init=epsg:32198"
+  END
+  WEB
+    METADATA
+      "ows_enable_request" "*"
+      "ows_title"          "WMS Cerilia"
+      "ows_onlineresource" "http://127.0.0.1/cgi-bin/mapserv?"
+      "ows_srs"            "EPSG:32198"
+    END
+  END
+
+  # dev purpose only
+  LAYER
+    NAME "cerilia-original-jpg"
+    METADATA
+      "wms_title" "Cerilia Original (jpg)"
+    END
+    TYPE RASTER
+    STATUS ON
+    DATA "cerilia-original.jpg"
+  END
+
+  # final map used for tile generation with mapcache
+  LAYER
+    NAME "cerilia-original"
+    METADATA
+      "wms_title" "Cerilia Original"
+    END
+    TYPE RASTER
+    STATUS ON
+    DATA "cerilia-original.tif"
+  END
+
+END
