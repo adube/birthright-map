@@ -10,7 +10,7 @@ Requirements
 
 *   Apache
 *   OpenLayers 2.12
-        * root directory must be web visible from /openlayers/2.12/
+    *   root directory must be web visible from /openlayers/2.12/
 *   MapServer CGI 6.0.x
 
 
