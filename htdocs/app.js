@@ -9,6 +9,7 @@ var map;
                 BRM.HOST+"/cache",
                 "cerilia_original",
                 {
+                    attribution: "<a href='http://community.wizards.com/bright/go/gallery/item/86320415?pref_tab=photos'>Map of Cerilia</a>, Compiled by Drakkan",
                     format: 'image/jpeg',
                     transitionEffect: 'resize',
                     resolutions: [2400, 1200, 600, 300, 150]
