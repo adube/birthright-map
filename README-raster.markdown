@@ -110,6 +110,17 @@ map is now georeferenced using the same coordinate system as your original
 bigger map.
 
 
+TileCache & seed
+----------------
+We seed each tile using TileCache, which then enables every files to be fetched
+directly as plain images instead of being rendered all the time.
+
+Here's the seed command used to seed the tiles :
+
+    tilecache_seed cerilia_original 0 6 -b 266.667,-1680266.666,2683466.665,266.667
+    tilecache_seed roesone 0 6 -b 605772.827,-1508943.390,803826.446,1264488.637
+
+
 References
 ----------
 
@@ -122,6 +133,7 @@ References
     *   [gdaladdo] [6]
 *   [GeoTIFF raster format] [4]
 *   [QuantumGIS] [8]
+*   [TileCache] [9]
 
 [1]: http://en.wikipedia.org/wiki/World_file "World File wiki page"
 [2]: http://egb13.net/2009/03/worldfile-calculator/ "World File calculator"
@@ -131,3 +143,4 @@ References
 [6]: http://www.gdal.org/gdaladdo.html "gdaladdo, builds overview images"
 [7]: http://community.wizards.com/bright/go/gallery/item/86320415?pref_tab=photos "Map of Cerilia, Compiled by Drakkan"
 [8]: http://www.qgis.org/ "QuantumGIS, an Open Source Geographic Information System"
+[9]: http://tilecache.org/ "TileCache, a WMS-C complient server"
