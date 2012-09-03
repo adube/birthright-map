@@ -54,7 +54,8 @@ var map;
                         605772.827, -1508943.390, 803826.446, 1264488.637),
                     resolutions: [2400, 1200, 600, 300, 150, 75],
                     singleTile: true,
-                    transitionEffect: 'resize'
+                    transitionEffect: 'resize',
+                    visibility: false
                 }
             )
         ],
