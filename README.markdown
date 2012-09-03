@@ -20,8 +20,8 @@ Installation
 *   Fill all requirements
 *   Copy and edit the JavaScript config file to fit your environmnent
     
-    cp htdocs/config-dist.inc.js htdocs/config.inc.js
-    vim htdocs/config.inc.js
+        cp htdocs/config-dist.inc.js htdocs/config.inc.js
+        vim htdocs/config.inc.js
 
 
 Data
