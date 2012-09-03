@@ -4,16 +4,27 @@ var map;
     map = new OpenLayers.Map({
         div: "map",
         layers: [
+            new OpenLayers.Layer.TileCache(
+                "Cerilia Original (tiled)",
+                BRM.HOST+"/cache",
+                "cerilia_original",
+                {
+                    format: 'image/jpeg',
+                    transitionEffect: 'resize',
+                    resolutions: [2400, 1200, 600, 300, 150]
+                }
+            ),
             new OpenLayers.Layer.WMS(
-                "Cerilia Original",
-                "http://127.0.0.1/cgi-bin/mapserv?map=/home/adube/proj/birthright-map/map/cerilia.map",
+                "Cerilia Original (untiled)",
+                BRM.HOST+"/cgi-bin/mapserv?map="+BRM.ROOT_DIR+"/map/cerilia.map",
                 {
                     layers: "cerilia-original"
                 },
                 {
-                  attribution: "<a href='http://community.wizards.com/bright/go/gallery/item/86320415?pref_tab=photos'>Map of Cerilia</a>, Compiled by Drakkan",
-                  resolutions: [2400, 1200, 600, 300, 150],
-                  singleTile: true
+                    attribution: "<a href='http://community.wizards.com/bright/go/gallery/item/86320415?pref_tab=photos'>Map of Cerilia</a>, Compiled by Drakkan",
+                    resolutions: [2400, 1200, 600, 300, 150],
+                    singleTile: true,
+                    transitionEffect: 'resize'
                 }
             )
         ],

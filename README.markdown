@@ -14,6 +14,16 @@ Requirements
 *   MapServer CGI 6.0.x
 
 
+Installation
+------------
+
+*   Fill all requirements
+*   Copy and edit the JavaScript config file to fit your environmnent
+    
+    cp htdocs/config-dist.inc.js htdocs/config.inc.js
+    vim htdocs/config.inc.js
+
+
 Data
 ----
 The data directory is not included in this repository.
