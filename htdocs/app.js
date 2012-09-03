@@ -12,7 +12,7 @@ var map;
                     attribution: "<a href='http://community.wizards.com/bright/go/gallery/item/86320415?pref_tab=photos'>Map of Cerilia</a>, Compiled by Drakkan",
                     format: 'image/jpeg',
                     transitionEffect: 'resize',
-                    resolutions: [2400, 1200, 600, 300, 150]
+                    resolutions: [2400, 1200, 600, 300, 150, 75]
                 }
             ),
             new OpenLayers.Layer.WMS(
@@ -23,7 +23,36 @@ var map;
                 },
                 {
                     attribution: "<a href='http://community.wizards.com/bright/go/gallery/item/86320415?pref_tab=photos'>Map of Cerilia</a>, Compiled by Drakkan",
-                    resolutions: [2400, 1200, 600, 300, 150],
+                    resolutions: [2400, 1200, 600, 300, 150, 75],
+                    singleTile: true,
+                    transitionEffect: 'resize'
+                }
+            ),
+            new OpenLayers.Layer.TileCache(
+                "Roesone (tiled)",
+                BRM.HOST+"/cache",
+                "roesone",
+                {
+                    isBaseLayer: false,
+                    format: 'image/png',
+                    maxExtent: new OpenLayers.Bounds(
+                        605772.827, -1508943.390, 803826.446, 1264488.637),
+                    resolutions: [2400, 1200, 600, 300, 150, 75],
+                    transitionEffect: 'resize'
+                }
+            ),
+            new OpenLayers.Layer.WMS(
+                "Roesone (untiled)",
+                BRM.HOST+"/cgi-bin/mapserv?map="+BRM.ROOT_DIR+"/map/cerilia.map",
+                {
+                    layers: "roesone",
+                    transparent: true
+                },
+                {
+                    isBaseLayer: false,
+                    maxExtent: new OpenLayers.Bounds(
+                        605772.827, -1508943.390, 803826.446, 1264488.637),
+                    resolutions: [2400, 1200, 600, 300, 150, 75],
                     singleTile: true,
                     transitionEffect: 'resize'
                 }

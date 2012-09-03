@@ -39,4 +39,14 @@ MAP
     DATA "cerilia-original.tif"
   END
 
+  LAYER
+    NAME "roesone"
+    METADATA
+      "wms_title" "Roesone"
+    END
+    TYPE RASTER
+    STATUS ON
+    DATA "roesone.tif"
+  END
+
 END

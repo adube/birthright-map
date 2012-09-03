@@ -87,6 +87,29 @@ to return an image when using the jpg file and around 90ms when using the
 GeoTIFF file instead. This will make the map tiles rendering much faster.
 
 
+Georeference additionnal rasters
+--------------------------------
+One we have a georeferenced image covering the whole continent, its coordinates
+can be used as a base for additionnal smaller maps, which will allow them to
+correctly overlap on top of each other.
+
+To do so, I used [QuantumGIS] [8]. In the Plugins/Manage Plugins menu, make sure
+you have the Georeferencer GDAL one installed.
+
+Open the software, then add the continent georeferenced GeoTIFF file as a new
+raster layer.  Open the Georeferencer tool, the click on the "Open Raster"
+button and a small map (let's say a map of Roesone domain, for example). 
+Follow the instructions, pick mercator coordinate system. You should see the
+map of Roesone now displayed in a window. Clicking on the map adds a point
+and a small window pops up where to input the coordinates. Instead, click the
+"From map canvas" button, which now shows the original Cerilia map. Click at the
+same location previously clicked and the coordinates will automatically fill
+themselves. I created a point for each province corners. Once you're done,
+click the "Start Georeferencing" button, follow the instructions. Your small
+map is now georeferenced using the same coordinate system as your original
+bigger map.
+
+
 References
 ----------
 
@@ -98,7 +121,7 @@ References
     *   [gdal_translate] [5]
     *   [gdaladdo] [6]
 *   [GeoTIFF raster format] [4]
-
+*   [QuantumGIS] [8]
 
 [1]: http://en.wikipedia.org/wiki/World_file "World File wiki page"
 [2]: http://egb13.net/2009/03/worldfile-calculator/ "World File calculator"
@@ -107,3 +130,4 @@ References
 [5]: http://www.gdal.org/gdal_translate.html "gdal_translate, GDAL utility to convert raster data between different formats"
 [6]: http://www.gdal.org/gdaladdo.html "gdaladdo, builds overview images"
 [7]: http://community.wizards.com/bright/go/gallery/item/86320415?pref_tab=photos "Map of Cerilia, Compiled by Drakkan"
+[8]: http://www.qgis.org/ "QuantumGIS, an Open Source Geographic Information System"
